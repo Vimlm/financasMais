@@ -1,0 +1,28 @@
+.banner {
+  display: flex;
+  height: 30rem;
+  padding: 4.2rem 0rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.titulo {
+  color: var(--blue-700, #1D3557);
+  font-family: Montserrat;
+  font-size: 2.375rem;
+  font-weight: 700;
+}
+
+.descricao {
+  color: var(--blue-900, #263238);
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.paragrafo {
+  color: var(--blue-900, #263238);
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
