@@ -1,11 +1,11 @@
-import { Heart } from "@phosphor-icons/react";
+// import styles from './landingPage.module.css'
+import Header from "../../components/Header/Header"
 
 const LandingPage = () => {
   return (
-    <>
-      <h1>{<Heart color="#AE2983" weight="fill" size={26} />} Hello World {<Heart color="#AE2983" weight="fill" size={26} />}</h1>
-      
-    </>
+    <div className="container">
+      <Header />
+    </div>
   )
 }
 
