@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-import Style from './button.module.css'
+import { ButtonStyle } from './button.styles.js'
 
 const Button = ({text}) => {
   return (
-    <button className={Style.btn}>{text}</button>
+    <ButtonStyle>{text}</ButtonStyle>
   )
 }
 
