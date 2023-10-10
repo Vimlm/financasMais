@@ -17,3 +17,15 @@ export const ButtonStyle = styled.button`
     background: tomato;
   }
 `
+
+export const PrimaryButton = styled(ButtonStyle)`
+  width: ${props => props.width ? props.width : 'fit-content'};
+  background-color: ${ props => props.theme.blue[700]};
+  color: ${ props => props.theme.white[50]};
+`
+
+export const SecundaryButton = styled(ButtonStyle)`
+  background-color: transparent;
+  color: ${ props => props.theme.blue[500]};
+  border: 1px solid ${ props => props.theme.blue[500]};
+`

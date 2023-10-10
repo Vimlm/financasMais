@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
-import { ButtonStyle } from './button.styles.js'
+import { PrimaryButton, SecundaryButton } from './button.styles.js'
 
-const Button = ({text}) => {
+const Button = ({variant, text, width, onClick}) => {
   return (
-    <ButtonStyle>{text}</ButtonStyle>
+    <>
+      {variant == 'primary' && <PrimaryButton onClick={onClick} width={width}>{text}</PrimaryButton>}
+      {variant == 'secundary' && <SecundaryButton onClick={onClick} width={width}>{text}</SecundaryButton>}
+    </>
   )
 }
 

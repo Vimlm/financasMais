@@ -1,19 +1,30 @@
-import style from './header.module.css'
-import { Plus } from "@phosphor-icons/react"
+/* eslint-disable react/prop-types */
+import { HeaderStyled } from './Header.styled.js'
+import Logo from '../../components/Logo/Logo'
+import Button from '../Button/Button'
+import { Link, useNavigate } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({firstText, secondText, thirdText, path, path2, path3}) => {
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate('/cadastro')
+  }
+
   return (
-    <header className={style.header}>
-      <h1 className={style.logo}>Finanças<Plus fill='#457B9D' weight='bold' size={30}/></h1>
-      <nav>
-        <ul className={style.menu}>
-          <li><a className={style.btnMenu} href="">Home</a></li>
-          <li><a className={style.btnMenu} href="">Quem•Somos</a></li>
-          <li><a className={style.btnMenu} href="">Entrar</a></li>
-          <li><a className={style.btnMenuConta} href="">Criar Conta</a></li>
-        </ul>
-      </nav>
-    </header>
+    <HeaderStyled>
+      <header className='header'>
+        <Logo variant='secundary'/>
+        <nav>
+          <ul className='menu'>
+            <li><Link className='btnMenu' to={path}>{firstText}</Link></li>
+            <li><Link className='btnMenu' to={path2}>{secondText}</Link></li>
+            { thirdText && <li><Link className='btnMenu' to={path3}>{thirdText}</Link></li> }
+            <Button onClick={handleClick} variant='primary' text='Criar Conta'/>
+          </ul>
+        </nav>
+      </header>
+    </HeaderStyled>
   )
 }
 
